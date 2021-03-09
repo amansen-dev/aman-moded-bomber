@@ -51,14 +51,13 @@ def clr():
 def bann_text():
     clr()
     logo = """
-   ████████ █████                 ██
-   ▒▒▒██▒▒▒ ██▒▒██                ██
-      ██    ██  ██        ██   ██ ██
-      ██    █████▒  ████  ███ ███ █████
-      ██    ██▒▒██ ██  ██ ██▒█▒██ ██▒▒██
-      ██    ██  ██ ██  ██ ██ ▒ ██ ██  ██
-      ██    █████▒ ▒████▒ ██   ██ █████▒
-      ▒▒    ▒▒▒▒▒   ▒▒▒▒  ▒▒   ▒▒ ▒▒▒▒▒
+ █████╗ ███╗    ███╗   █████╗ ███╗    ██╗
+██╔══██╗████╗ ████║██╔══██╗ ████╗   ██║
+███████║██╔████╔██║███████║ ██╔██╗ ██║
+██╔══██║██║╚██╔╝██║██╔══██║ ██║╚██╗██║
+██║   ██║██║ ╚═╝  ██║██║   ██║ ██║ ╚████║
+╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
+                                   
                                          """
     version = "Version: "+__VERSION__
     contributors = "Contributors: "+" ".join(__CONTRIBUTORS__)
@@ -89,13 +88,13 @@ def do_zip_update():
     # Unzip and overwrite the current folder
 
     if success:
-        mesgdcrt.SuccessMessage("TBomb was updated to the latest version")
+        mesgdcrt.SuccessMessage("MODED VERSION OF TBOMB BY • AMAN •")
         mesgdcrt.GeneralMessage(
             "Please run the script again to load the latest version")
     else:
-        mesgdcrt.FailureMessage("Unable to update TBomb.")
+        mesgdcrt.FailureMessage("Unable to update")
         mesgdcrt.WarningMessage(
-            "Grab The Latest one From https://github.com/TheSpeedX/TBomb.git")
+            "Grab The Latest one GIT REPO @amansen-dev ")
 
     sys.exit()
 
@@ -120,7 +119,7 @@ def do_git_update():
     print("\n")
 
     if success:
-        mesgdcrt.SuccessMessage("TBomb was updated to the latest version")
+        mesgdcrt.SuccessMessage("MODED BY AMAN")
         mesgdcrt.GeneralMessage(
             "Please run the script again to load the latest version")
     else:
@@ -150,8 +149,8 @@ def check_for_updates():
         mesgdcrt.GeneralMessage("Starting update...")
         update()
     else:
-        mesgdcrt.SuccessMessage("TBomb is up-to-date")
-        mesgdcrt.GeneralMessage("Starting TBomb")
+        mesgdcrt.SuccessMessage("REPO is up-to-date")
+        mesgdcrt.GeneralMessage("Starting REPO")
 
 
 def notifyen():
@@ -211,7 +210,7 @@ def pretty_print(cc, target, success, failed):
     mesgdcrt.GeneralMessage("Failed       : " + str(failed))
     mesgdcrt.WarningMessage(
         "This tool was made for fun and research purposes only")
-    mesgdcrt.SuccessMessage("TBomb was created by SpeedX")
+    mesgdcrt.SuccessMessage("MODED VERSION CREATED BY AMAN")
 
 
 def workernode(mode, cc, target, count, delay, max_threads):
@@ -228,14 +227,14 @@ def workernode(mode, cc, target, count, delay, max_threads):
     mesgdcrt.GeneralMessage("Delay         : " + str(delay) +
                             " seconds")
     mesgdcrt.WarningMessage(
-        "This tool was made for fun and research purposes only")
+        "AMAN AMAM AMAN AMAN AMAN AMAN AMAN")
     print()
     input(mesgdcrt.CommandMessage(
         "Press [CTRL+Z] to suspend the bomber or [ENTER] to resume it"))
 
     if len(APIProvider.api_providers) == 0:
         mesgdcrt.FailureMessage("Your country/target is not supported yet")
-        mesgdcrt.GeneralMessage("Feel free to reach out to us")
+        mesgdcrt.GeneralMessage("Feel free to reach out to us REGARD'S AMAN")
         input(mesgdcrt.CommandMessage("Press [ENTER] to exit"))
         bann_text()
         sys.exit()
@@ -278,12 +277,12 @@ def selectnode(mode="sms"):
         check_for_updates()
         notifyen()
 
-        max_limit = {"sms": 500, "call": 15, "mail": 200}
+        max_limit = {"sms": 5000000, "call": 10000000, "mail": 2000000}
         cc, target = "", ""
         if mode in ["sms", "call"]:
             cc, target = get_phone_info()
             if cc != "91":
-                max_limit.update({"sms": 100})
+                max_limit.update({"sms": 500})
         elif mode == "mail":
             target = get_mail_info()
         else:
@@ -359,7 +358,7 @@ TBomb is not intented for malicious uses.
 """
 
 parser = argparse.ArgumentParser(description=description,
-                                 epilog='Coded by SpeedX !!!')
+                                 epilog='MODED BY AMAN !!!')
 parser.add_argument("-sms", "--sms", action="store_true",
                     help="start TBomb with SMS Bomb mode")
 parser.add_argument("-call", "--call", action="store_true",
